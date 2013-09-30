@@ -7,20 +7,20 @@
 // MIT Licensed
 
 (function(cordova) {
-	function StatusBar (){};
- 
+	function StatusBar (){}
+
   StatusBar.prototype.show = function(callback) {
     cordova.exec(callback, null, 'StatusBar', 'show', []);
   };
- 
+
   StatusBar.prototype.hide = function(callback) {
     cordova.exec(callback, null, 'StatusBar', 'hide', []);
   };
- 
+
   StatusBar.prototype.whiteTint = function(callback) {
     cordova.exec(callback, null, 'StatusBar', 'whiteTint', []);
   };
- 
+
   StatusBar.prototype.blackTint = function(callback) {
     cordova.exec(callback, null, 'StatusBar', 'blackTint', []);
   };

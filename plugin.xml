@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+  <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+             id="org.apache.cordova.statusBar"
+        version="0.2.2">
+
+      <name>Status Bar</name>
+      <description>Cordova Status Bar Plugin</description>
+      <license>Apache 2.0</license>
+     <keywords>cordova</keywords>
+
+     <js-module src="www/StatusBar.js" name="statusBar">
+         <clobbers target="window.plugins.statusBar" />
+     </js-module>
+
+     <!-- ios -->
+     <platform name="ios">
+         <config-file target="config.xml" parent="/*">
+             <feature name="SatusBar">
+                 <param name="ios-package" value="StatusBar"/>
+             </feature>
+         </config-file>
+         <header-file src="src/ios/StatusBar.h" />
+         <source-file src="src/ios/StatusBar.m" />
+     </platform>
+
+
+ </plugin>
